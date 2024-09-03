@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dollar By Dollar - Our Team</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #f5f5f5;
+            background-color: #f0f4f8;
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+        }
+
+        @keyframes fadeIn {
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .slide-in {
+            transform: translateY(20px);
+            opacity: 0;
+            animation: slideIn 1s ease-in-out forwards;
+        }
+
+        @keyframes slideIn {
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .hover-underline-animation {
+            display: inline-block;
+            position: relative;
+            color: #333;
+        }
+
+        .hover-underline-animation::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #0077b6;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .hover-underline-animation:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        .hover-bg-animation {
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .hover-bg-animation:hover {
+            background-color: #0077b6;
+        }
+
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .team-member {
+            background-color: #1e3a8a;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 220px;
+            color: #f5f5f5;
+        }
+
+        .team-member img {
+            width: 100%;
+            border-radius: 50%;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-member h2 {
+            font-size: 1.25rem;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-member h3 {
+            font-size: 1rem;
+            color: #d1e7ff;
+            margin-bottom: 0.5rem;
+            font-weight: normal;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #1e3a8a;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        footer {
+            background-color: #1e3a8a;
+            padding: 1rem 0;
+        }
+
+        footer p,
+        footer a {
+            color: #d1e7ff;
+        }
+
+        footer nav a:hover {
+            color: #0077b6;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-blue-600 p-6 flex justify-between items-center fade-in shadow-lg">
+        <h1 class="text-3xl font-semibold text-white">DOLLAR BY DOLLAR</h1>
+        <nav>
+            <ul class="flex space-x-8">
+                <li><a href="index.html" class="hover-underline-animation">Home</a></li>
+                <li><a href="about.html" class="hover-underline-animation">About</a></li>
+                <li><a href="#" class="hover-underline-animation">Team</a></li>
+                <li><a href="#" class="hover-underline-animation">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="p-16 bg-gradient-to-b from-blue-50 to-blue-100 slide-in">
+        <h1>Meet Our Team</h1>
+
+        <div class="team-container">
+            <!-- Team Member: Edward Li -->
+            <div class="team-member">
+                <img src="https://placehold.co/150x150" alt="Edward Li">
+                <h2>Edward Li</h2>
+                <h3>Co-President & Co-Founder</h3>
+            </div>
+
+            <!-- Team Member: Eric Yin -->
+            <div class="team-member">
+                <img src="https://placehold.co/150x150" alt="Eric Yin">
+                <h2>Eric Yin</h2>
+                <h3>Co-President & Co-Founder</h3>
+            </div>
+
+            <!-- Placeholder Team Members -->
+            <div class="team-member">
+                <img src="https://placehold.co/150x150" alt="Team Member">
+                <h2>Placeholder Name</h2>
+                <h3>Position</h3>
+            </div>
+
+            <div class="team-member">
+                <img src="https://placehold.co/150x150" alt="Team Member">
+                <h2>Placeholder Name</h2>
+                <h3>Position</h3>
+            </div>
+
+            <div class="team-member">
+                <img src="https://placehold.co/150x150" alt="Team Member">
+                <h2>Placeholder Name</h2>
+                <h3>Position</h3>
+            </div>
+
+            <div class="team-member">
+                <img src="https://placehold.co/150x150" alt="Team Member">
+                <h2>Placeholder Name</h2>
+                <h3>Position</h3>
+            </div>
+
+            <div class="team-member">
+                <img src="https://placehold.co/150x150" alt="Team Member">
+                <h2>Placeholder Name</h2>
+                <h3>Position</h3>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center fade-in shadow-lg">
+        <nav class="flex justify-center space-x-8 mb-4">
+            <a href="index.html" class="hover-underline-animation">Home</a>
+            <a href="about.html" class="hover-underline-animation">About Us</a>
+            <a href="#" class="hover-underline-animation">Our Team</a>
+            <a href="#" class="hover-underline-animation">Get Involved</a>
+        </nav>
+        <p class="text-sm mb-4">© Copyright 2023 DollarByDollar</p>
+        <p class="text-sm">Created by Edward Li and Eric Yin</p>
+        <div class="flex justify-center space-x-6 mt-4">
+            <a href="#"><i class="fab fa-linkedin hover:text-white"></i></a>
+            <a href="#"><i class="fab fa-instagram hover:text-white"></i></a>
+            <a href="#"><i class="fab fa-tiktok hover:text-white"></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>
