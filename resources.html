@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dollar By Dollar - Resources</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
@@ -13,6 +12,27 @@
             font-family: 'Poppins', sans-serif;
             color: #333;
             background-color: #f0f4f8;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+            padding: 15px;
+        }
+
+        .card:hover {
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-header {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 15px;
+            font-size: 1.25rem;
+            font-weight: 600;
+            border-radius: 8px 8px 0 0;
         }
     </style>
 </head>
@@ -29,32 +49,20 @@
         </nav>
     </header>
 
-    <main class="p-10 max-w-4xl mx-auto">
+    <main class="p-10 max-w-7xl mx-auto">
         <h2 class="text-4xl font-semibold text-blue-800 mb-6">Resources</h2>
         
-        <div class="space-y-4">
-            <!-- Dropdown sections -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
             <script>
-                $(document).ready(function() {
-                    $(".dropdown-button").click(function() {
-                        $(this).next(".dropdown-content").slideToggle();
-                    });
-                });
-            </script>
-            
-            <!-- Generate 8 dropdowns dynamically -->
-            <script>
-                const dropdowns = [
+                const sections = [
                     "Financial Planning", "Investing Basics", "Saving Strategies", "Budgeting Tips", "Debt Management",
                     "Retirement Planning", "Tax Strategies", "Economic Insights"
                 ];
                 
-                document.write(dropdowns.map((title, index) => `
-                    <div class="bg-white shadow-md rounded-lg">
-                        <button class="w-full text-left p-4 bg-blue-500 text-white font-semibold rounded-t-lg focus:outline-none dropdown-button">
-                            ${title}
-                        </button>
-                        <div class="dropdown-content hidden p-4 border-t border-gray-300">
+                document.write(sections.map((title, index) => `
+                    <div class="card">
+                        <div class="card-header">${title}</div>
+                        <div class="card-content p-4 bg-blue-50 rounded-b-lg">
                             <ul class="list-disc list-inside text-gray-700">
                                 <li><a href="#" class="text-blue-600 hover:underline">Placeholder Link 1</a></li>
                                 <li><a href="#" class="text-blue-600 hover:underline">Placeholder Link 2</a></li>
