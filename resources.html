@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,6 +37,7 @@
         }
     </style>
 </head>
+
 <body>
     <header class="bg-blue-600 p-6 flex justify-between items-center shadow-lg">
         <h1 class="text-3xl font-semibold text-white">DOLLAR BY DOLLAR</h1>
@@ -50,30 +52,9 @@
     </header>
 
     <main class="p-10 max-w-7xl mx-auto">
-        <h2 class="text-4xl font-semibold text-blue-800 mb-6 text-center" >Resources</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <script>
-                const sections = [
-                    "Financial Planning", "Investing Basics", "Saving Strategies", "Budgeting Tips", "Debt Management",
-                    "Retirement Planning", "Tax Strategies", "Economic Insights"
-                ];
-                
-                document.write(sections.map((title, index) => `
-                    <div class="card">
-                        <div class="card-header">${title}</div>
-                        <div class="card-content p-4 bg-blue-50 rounded-b-lg">
-                            <ul class="list-disc list-inside text-gray-700">
-                                <li><a href="#" class="text-blue-600 hover:underline">Placeholder Link 1</a></li>
-                                <li><a href="#" class="text-blue-600 hover:underline">Placeholder Link 2</a></li>
-                                <li><a href="#" class="text-blue-600 hover:underline">Placeholder Link 3</a></li>
-                                <li><a href="#" class="text-blue-600 hover:underline">Placeholder Link 4</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                `).join(''));
-            </script>
-        </div>
+        <h2 class="text-4xl font-semibold text-blue-800 mb-6 text-center">Resources</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6" id="resource_grid"></div>
     </main>
 
     <footer class="bg-blue-600 text-center py-6 text-white mt-10">
@@ -86,4 +67,30 @@
         <p class="text-sm">© 2025 DollarByDollar. All rights reserved.</p>
     </footer>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    var sections = [
+        {"link":"", "title": "Module 1: Introduction to Money", "discription": "Throughout history, the concept of money has evolved and taken many different forms to serve as a medium of exchange across the world. The purpose is simple: to allow for easier transactions and exchange between others, for things that we want." },
+        {"link":"", "title": "Module 2: Saving and Investing", "discription": "" },
+        {"link":"", "title": "Module 3: Budgeting", "discription": "" },
+        {"link":"", "title": "Module 4: Banking", "discription": "" },
+        {"link":"", "title": "Module 5: Credit and Debt", "discription": "" },
+        {"link":"", "title": "Module 6: Consumer Awareness", "discription": "" },
+        {"link":"", "title": "Module 7: Financial Ethics", "discription": "" },
+        {"link":"", "title": "Module 8: The Stock Market", "discription": "" }
+    ];
+
+    for (var i = 0; i < sections.length; i++) {
+        $("#resource_grid").append(`
+                    <div class='card'>
+                        <div class='card-header'>${sections[i]['title']}</div>
+                        <div class='card-content p-4 bg-blue-50 rounded-b-lg'>
+                            <p class='text-blue-600 list-disc list-inside text-gray-700'>${sections[i]['discription']}</p>
+                        </div>
+                    </div>
+                `);
+    }
+
+</script>
+
 </html>
