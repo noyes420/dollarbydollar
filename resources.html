@@ -11,8 +11,64 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            color: #333;
+            color: #f5f5f5;
             background-color: #f0f4f8;
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+        }
+
+        @keyframes fadeIn {
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .slide-in {
+            transform: translateY(20px);
+            opacity: 0;
+            animation: slideIn 1s ease-in-out forwards;
+        }
+
+        @keyframes slideIn {
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .hover-underline-animation {
+            display: inline-block;
+            position: relative;
+            color: #333;
+        }
+
+        .hover-underline-animation::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #0077b6;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .hover-underline-animation:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        .hover-bg-animation {
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .hover-bg-animation:hover {
+            background-color: #0077b6;
         }
 
         .card {
@@ -39,26 +95,21 @@
 </head>
 
 <body>
+
     <header class="bg-blue-600 p-6 flex justify-between items-center fade-in shadow-lg fixed top-0 left-0 w-full z-50">
-        <div class="flex items-center space-x-4">
-            <a href="/" aria-label="Home">
-                <img src="images/navlogo.png" alt="Dollar By Dollar Logo" class="w-12">
-            </a>
-            <h1 class="text-3xl font-semibold text-white-500">DOLLAR BY DOLLAR</h1>
-        </div>
+        <h1 class="text-3xl font-semibold text-white-500">DOLLAR BY DOLLAR</h1>
         <nav>
             <ul class="flex space-x-8">
                 <li><a href="index.html" class="hover-underline-animation">Home</a></li>
                 <li><a href="about.html" class="hover-underline-animation">About</a></li>
                 <li><a href="team.html" class="hover-underline-animation">Team</a></li> <!-- Updated link -->
-                <li><a href="/" class="hover-underline-animation">Resources</a></li>
+                <li><a href="#" class="hover-underline-animation">Resources</a></li>
             </ul>
         </nav>
-
     </header>
 
-    <main class="p-10 max-w-7xl mx-auto">
-        <h2 class="text-4xl font-semibold text-blue-800 mb-6 text-center">Resources</h2>
+    <main class="p-10 max-w-7xl mx-auto pt-24">
+        <h2 class="text-4xl font-semibold text-blue-800 mb-10 text-center">Resources</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6" id="resource_grid"></div>
     </main>
@@ -68,9 +119,8 @@
             <a href="index.html" class="hover:underline">Home</a>
             <a href="about.html" class="hover:underline">About Us</a>
             <a href="team.html" class="hover:underline">Our Team</a>
-            <a href="resources.html" class="hover:underline">Resources</a>
+            <a href="#" class="hover:underline">Resources</a>
         </nav>
-        <p class="text-sm">© 2025 DollarByDollar. All rights reserved.</p>
     </footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
