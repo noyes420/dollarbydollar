@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "layout.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dollar By Dollar - Resources</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+{% set page_title="Dollar By Dollar - Resources" %}
+
+{% block style %}
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -92,21 +87,9 @@
             border-radius: 8px 8px 0 0;
         }
     </style>
-</head>
+{% endblock %}
 
-<body>
-
-    <header class="bg-blue-600 p-6 flex justify-between items-center fade-in shadow-lg fixed top-0 left-0 w-full z-50">
-        <h1 class="text-3xl font-semibold text-white-500">DOLLAR BY DOLLAR</h1>
-        <nav>
-            <ul class="flex space-x-8">
-                <li><a href="index.html" class="hover-underline-animation">Home</a></li>
-                <li><a href="about.html" class="hover-underline-animation">About</a></li>
-                <li><a href="team.html" class="hover-underline-animation">Team</a></li> <!-- Updated link -->
-                <li><a href="#" class="hover-underline-animation">Resources</a></li>
-            </ul>
-        </nav>
-    </header>
+{% block content %}
 
     <main class="p-10 max-w-7xl mx-auto pt-24">
         <h2 class="text-4xl font-semibold text-blue-800 mb-10 text-center">Resources</h2>
@@ -149,4 +132,4 @@
 
 </script>
 
-</html>
+{% endblock %}
