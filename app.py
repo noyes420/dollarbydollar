@@ -10,7 +10,7 @@ def home_page():
 
 @app.route('/about')
 def about_page():
-    return render_template('about.html', page_title='Dollar By Dollar - About Us')
+    return render_template('about.html')
 
 @app.route('/resources')
 def resources_page():
@@ -18,6 +18,8 @@ def resources_page():
 
 @app.route('/team')
 def team_page():
-    return render_template('team.html', page_title='Dollar By Dollar - Our Team')
+    return render_template('team.html')
 
 
+
+app.run(debug=True)
